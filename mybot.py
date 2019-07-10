@@ -41,6 +41,9 @@ def reverse(bot,update):
 def main():
     # Initialize the updater and dispatcher
     tok = os.getenv("TOKEN")
+#     testing start
+    print('T:',tok)
+#   testing end
     updater = Updater(token=tok)
     dispatcher = updater.dispatcher
 
