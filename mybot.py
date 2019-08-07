@@ -21,11 +21,8 @@ logger = logging.getLogger(__name__)
 
 # Defined the handler methods
 def start(bot, update):
-    # print('Update object: ', bot)
-    # print('Context object: ',update)
-
     #chat_id or chat.id both can be used below 
-    bot.send_message(chat_id=update.message.chat_id,text="Hello! what can I do for you ?")
+    bot.send_message(chat_id=update.message.chat_id,text="Hello! I am bot that does simple reversal of sent text.\nTry by sending some text!")
 
 def error(bot, update):
     # Log errors
@@ -41,9 +38,6 @@ def reverse(bot,update):
 def main():
     # Initialize the updater and dispatcher
     tok = os.getenv("TOKEN")
-#     testing start
-    print('T:',tok)
-#   testing end
     updater = Updater(token=tok)
     dispatcher = updater.dispatcher
 
